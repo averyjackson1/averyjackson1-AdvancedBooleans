@@ -1,3 +1,5 @@
+import javax.lang.model.util.ElementScanner6;
+
 /**
  * Boolean operators can be combined just like having multiple mathematical operators in a math equation.
  * Like math equations, they can be combined using parentheses, where the parentheses are completed first. Otherwise,
@@ -16,7 +18,10 @@ public class AdvancedBooleanLogic {
      * @return false if b1 and b2 are both true. Otherwise, return true.
      */
     public boolean returnNotBoth(boolean b1, boolean b2){
+        if (b1 && b2)
         return false;
+       else 
+       return true;
     }
     /**
      * b1 OR b2, BUT NOT BOTH
@@ -25,6 +30,11 @@ public class AdvancedBooleanLogic {
      * @return true if either b1 or b2 is true, but false if they are both true or both false.
      */
     public boolean returnExclusiveOr(boolean b1, boolean b2){
+         if( b1 && b2)
+        return false;
+        else if( b1 || b2)
+        return true;
+        else
         return false;
     }
 
@@ -35,6 +45,9 @@ public class AdvancedBooleanLogic {
      * @return true if neither b1 nor b2 are true. Return false if either b1 or b2 is true.
      */
     public boolean returnNeitherNor(boolean b1, boolean b2){
+        if(b1 || b2)
         return false;
+        else
+        return true;
     }
 }
